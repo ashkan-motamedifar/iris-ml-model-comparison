@@ -54,11 +54,14 @@ Results are ranked by **Test F1-score**.
 
 Example output (abridged):
 
-| Model | CV F1  | Test ACC | Test Precision | Test Recall | Test F1 | Best Params                        |
-| ----- | ------ | -------- | -------------- | ----------- | ------- | ---------------------------------- |
-| SVM   | 0.9733 | 0.9778   | 0.978          | 0.978       | 0.978   | {kernel: rbf, C: 10, gamma: scale} |
-| RF    | 0.9667 | 0.9556   | 0.956          | 0.956       | 0.956   | {...}                              |
-| …     | …      | …        | …              | …           | …       | …                                  |
+| Model | CV_F1 | Test_ACC | Test_Precision | Test_Recall | Test_F1 | Best_Params |
+|-------|-------|----------|----------------|-------------|---------|-------------|
+| DT    | 0.9522 | 0.9556 | 0.9608 | 0.9556 | 0.9554 | {'clf__criterion': 'gini', 'clf__max_depth': None, 'clf__min_samples_split': 5} |
+| LogReg | 0.9809 | 0.9111 | 0.9155 | 0.9111 | 0.9107 | {'clf__C': 1, 'clf__penalty': 'l2', 'clf__solver': 'lbfgs'} |
+| SVM   | 0.9714 | 0.9111 | 0.9155 | 0.9111 | 0.9107 | {'clf__C': 0.1, 'clf__gamma': 'scale', 'clf__kernel': 'linear'} |
+| KNN   | 0.9713 | 0.9111 | 0.9298 | 0.9111 | 0.9095 | {'clf__n_neighbors': 5, 'clf__p': 1, 'clf__weights': 'uniform'} |
+| RF    | 0.9522 | 0.8889 | 0.8981 | 0.8889 | 0.8878 | {'clf__max_depth': None, 'clf__min_samples_split': 2, 'clf__n_estimators': 100} |
+
 
 ---
 
